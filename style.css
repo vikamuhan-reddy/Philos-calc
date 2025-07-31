@@ -1,0 +1,48 @@
+body {
+   background: linear-gradient(to right, #ffd6e0, #ffb3c6);
+    color: white;
+}
+
+h1{
+    display:flex;
+    justify-content: center;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 3rem;
+}
+p{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+}
+h3{
+    color:maroon;
+    font-size:22px;
+}
+
+.contain{
+    display:grid;
+    grid-template-columns: repeat(2,0.3fr);
+    gap:40px;
+}
+.input-text{
+    width:250px;
+    height:40px;
+    font-size: 20px;
+}
+#myButton{
+    background-color: black;
+    color:white;
+    display: block;
+    margin: 0 auto;
+    font-size:15px;
+    padding:10px ;
+    border-radius: 10%;
+    text-decoration: none;
+    
+}
+
+h4{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    text-align: center;
+}

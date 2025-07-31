@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h3{
+            display:flex;
+            justify-content: center;
+            font-size:2.5rem;
+        }
+    </style>
+    <title>Report</title>
+</head>
+<body>
+    <h1>The Result of Your Love</h1>
+    <h3 id ='use'></h3>
+    <h3 id="result"></h3>
+    <h4 id="poem"></h3>
+
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const content = localStorage.getItem('userData');
+    if (content) {
+        const text = JSON.parse(content);
+        document.getElementById('use').textContent = text.fName + " ❤️ " + text.sName;
+
+        let n = Math.random();
+        n = n * 100;
+        n = Math.floor(n);
+        document.getElementById('result').innerHTML = "Your Love Percentage  :  " + n.toString();
+
+        // ✅ NEW BLOCK: Generate a 2-line poem
+       const poems = [
+        "Two hearts beat in perfect time,<br>Together they create a rhyme.",
+        "In your eyes I see my fate,<br>Two souls dancing — love is great.",
+        "Like stars that shine in endless skies,<br>Our love will never compromise.",
+        "From your name to mine, so sweet,<br>When we’re together, life’s complete.",
+        "Your smile, my peace, your voice, my song,<br>We’ve been together all along.",
+        "With every glance, you make me stay,<br>Forever yours, come what may.",
+        "A love so bright, it lights the night,<br>Holding hands, we feel so right.",
+        "Your laugh is where my heartbeat starts,<br>You hold the key to all my parts.",
+        "No map, no guide, just me and you,<br>In love’s wild journey, strong and true.",
+        "Your whisper soft, your gaze so deep,<br>You’re in my dreams, even in sleep.",
+        "A touch from you, a look, a smile,<br>Makes everything in life worthwhile.",
+        "You and I, a perfect pair,<br>A story written in the air.",
+        "Through storms and sun, we always grow,<br>Our love's a stream that’ll always flow.",
+        "A name I write in every line,<br>This poem ends with you as mine.",
+        "Love’s not measured by the time,<br>But by your hand holding mine.",
+        "When I’m with you, all fears depart,<br>You’re the rhythm of my heart.",
+        "Your presence turns my skies so blue,<br>The world feels right when I'm with you.",
+        "We dance in silence, laugh in peace,<br>With every hug, my doubts release.",
+        "You light me up from deep inside,<br>With you I never need to hide.",
+        "A moment shared, a simple kiss,<br>Wrapped in you, I find my bliss.",
+        "We speak in glances, not in words,<br>In your arms, I soar like birds.",
+        "From every name, I chose just one,<br>You're my moon, my stars, my sun.",
+        "Time may pass and seasons flee,<br>But you're my constant melody.",
+        "No fairy tale, no distant dream,<br>Just love that flows in steady stream.",
+        "You’re not just love, you're poetry,<br>A perfect match — you and me."
+    ];
+
+
+        const chosenPoem = poems[Math.floor(Math.random() * poems.length)];
+        document.getElementById('poem').innerHTML = chosenPoem; // ✅ NEW LINE
+    }
+});
+</script>
+
+</body>
+</html>

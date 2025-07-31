@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Love Calculator</title>
+</head>
+<body>
+    <h1>Welcome to Love Calculator</h1>
+    <p>Ever wondered how much love sparks between two names? 
+        Whether it's a crush, a friend, or your forever person, 
+        LoveCalc is a fun and lighthearted way to find out your love compatibility based on names. 
+        Just enter two names, and let the magic of love math reveal your percentage.
+        Remember — it's all for fun, but who knows? You might just find your perfect match!
+    </p>
+
+    <div class="contain">
+        <h3>Name of your's</h3>
+    <input type="text" class="input-text" id="name1">
+
+    <h3>Name of your valentine</h3>
+    <input type="text" class="input-text" id="name2">
+    </div>
+    
+    <div class="calculate">
+            <button id="myButton">Find it!</button>
+    </div>
+    <script>    
+        document.addEventListener('DOMContentLoaded', function () {
+            // This helps to load the DOM-document object Model content 
+        document.getElementById('myButton').addEventListener('click', function () {
+            // Used when the button at id - 'myButton' will act as trigger to the function
+            
+            const nameOne = document.getElementById('name1').value;
+            const nameTwo = document.getElementById('name2').value;
+
+            const dataToSend = {
+            fName: nameOne,
+            sName: nameTwo
+            };
+
+            localStorage.setItem('userData', JSON.stringify(dataToSend));
+            window.location.href = 'end.html';
+        });
+        });
+        
+        
+    </script>
+    
+</body>
+</html>
